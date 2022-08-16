@@ -31,32 +31,6 @@ let package = Package(
         .define("PB_NO_PACKED_STRUCTS", to: "1"),
         .define("PB_ENABLE_MALLOC", to: "1"),
       ]
-    ),
-    .testTarget(
-      name: "swift-test",
-      dependencies: [
-        "nanopb",
-      ],
-      path: "spm-test/swift",
-      cSettings: [
-        .headerSearchPath("../"),
-        .define("PB_FIELD_32BIT", to: "1"),
-        .define("PB_NO_PACKED_STRUCTS", to: "1"),
-        .define("PB_ENABLE_MALLOC", to: "1"),
-      ]
-    ),
-    .testTarget(
-      name: "objc-test",
-      dependencies: [
-        "nanopb",
-      ],
-      path: "spm-test/objc",
-      cSettings: [
-        .headerSearchPath("../"),
-        .define("PB_FIELD_32BIT", to: "1"),
-        .define("PB_NO_PACKED_STRUCTS", to: "1"),
-        .define("PB_ENABLE_MALLOC", to: "1"),
-      ]
     )
   ]
 )
